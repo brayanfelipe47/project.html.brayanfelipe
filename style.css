@@ -1,0 +1,145 @@
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #006437; /* Verde Palmeiras */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 5px solid #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-style: italic;
+    margin-top: 5px;
+    color: #e0e0e0;
+}
+
+/* Container Principal */
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Seções */
+section {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-left: 5px solid #006437;
+}
+
+section h2 {
+    color: #006437;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+/* Estilização da lista de títulos */
+.titulos-lista {
+    list-style: none;
+}
+
+.titulos-lista li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulos-lista li:last-child {
+    border-bottom: none;
+}
+
+.campeonato {
+    font-weight: bold;
+}
+
+.quantidade {
+    background-color: #006437;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Rodapé */
+footer {
+    background-color: #111;
+    color: #888;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+2. Atualize o arquivo index.html
+Agora, o seu arquivo HTML precisa "chamar" esse arquivo CSS externo. Ele deve ficar assim:
+
+HTML
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sociedade Esportiva Palmeiras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Sociedade Esportiva Palmeiras</h1>
+        <p>O Maior Campeão do Brasil</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="historia">
+            <h2>História</h2>
+            <p>Fundado em 26 de agosto de 1914 como <strong>Palestra Italia</strong>, o clube mudou de nome para Sociedade Esportiva Palmeiras em 1942, por razões políticas durante a Segunda Guerra Mundial. Com uma história rica e uma torcida apaixonada, o Verdão se consolidou como uma das forças mais temidas do futebol sul-americano.</p>
+        </section>
+
+        <section id="conquistas">
+            <h2>Principais Títulos</h2>
+            <ul class="titulos-lista">
+                <li><span class="campeonato">Copa Libertadores da América</span> <span class="quantidade">3</span></li>
+                <li><span class="campeonato">Campeonato Brasileiro</span> <span class="quantidade">12</span></li>
+                <li><span class="campeonato">Copa do Brasil</span> <span class="quantidade">4</span></li>
+                <li><span class="campeonato">Campeonato Paulista</span> <span class="quantidade">26</span></li>
+            </ul>
+        </section>
+
+        <section id="estadio">
+            <h2>Allianz Parque</h2>
+            <p>A moderna arena do Palmeiras, inaugurada em 2014, é considerada uma das mais bonitas e multiuso da América Latina. Localizada no tradicional bairro da Pompeia, em São Paulo, é o caldeirão onde a torcida alviverde empurra o time rumo às vitórias.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Página de Fã do Palmeiras. Todos os direitos reservados ao clube.</p>
+    </footer>
+
+</body>
+</html>
